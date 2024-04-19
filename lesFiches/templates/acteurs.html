@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Nombre de films</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for acteur in acteurs %}
+        <tr>
+            <td>{{ acteur.prenom }}</td>
+            <td>{{ acteur.nom }}</td>
+            <td>{{acteur.films.count }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
